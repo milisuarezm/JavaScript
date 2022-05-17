@@ -83,6 +83,13 @@ const setCarrito = item => {
 
     carrito[producto.id] = { ...producto}
     pintarCarrito()
+    Swal.fire({                                 // mensaje de producto añadido 
+        icon: 'success',
+        text: 'Your item has been added',
+        showConfirmButton: false,
+        timer: 2000
+    })
+    
 }
 
 const pintarCarrito = ()=> {
