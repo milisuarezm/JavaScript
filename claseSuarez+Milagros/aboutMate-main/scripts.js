@@ -20,10 +20,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 cards.addEventListener('click', e =>{
     addCarrito(e)
+    Swal.fire({                                 // mensaje de producto añadido 
+        icon: 'success',
+        text: 'Your item has been added',
+        showConfirmButton: false,
+        timer: 2000
+    })
+    
 })
 
 items.addEventListener('click', e=>{
     btnAccion(e)
+   
 })
 
 const fetchData = async()=>{
@@ -122,11 +130,24 @@ const pintarFooter = () => {
         btnVaciar.addEventListener('click', ()=>{
             carrito = {}
             pintarCarrito()
+            Swal.fire({                   // MENSAJE CUANDO ELIMINAS EL CARRITO
+                title: 'Removing items from your cart',
+                icon: 'warning',
+        
+
+              }).then( (result) => {
+
+                if(result.isConfirmed) {
+                    console.log("Clickeo OK");
+                }
+               
+    })
         })
     }
 
 
-const btnAccion = e =>{
+
+    const btnAccion = e =>{
    
     if(e.target.classList.contains('btn-info')){
        
@@ -135,6 +156,8 @@ const btnAccion = e =>{
 
         carrito[e.target.dataset.id] = {...producto}
         pintarCarrito()
+        
+
     }
 
     if(e.target.classList.contains('btn-danger')){
@@ -149,3 +172,15 @@ const btnAccion = e =>{
 
     e.stopPropagation()
 }
+
+// VALIDANDO FORMULARIO EN SECCION CONTACTO
+
+// funciona cuando NO pones arroba en la parte del email, y sale un mensaje
+$(document).ready(function(){
+    $("#contact-form").validationEngine()
+})
+       
+
+ 
+
+ 
