@@ -10,7 +10,7 @@ let carrito = {}
 
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    fetchData()
+    fetchData()                                          // AGREGANDO FETCH
     if(localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         pintarCarrito()
@@ -34,7 +34,7 @@ items.addEventListener('click', e=>{
    
 })
 
-const fetchData = async()=>{
+const fetchData = async()=>{                                      // AGREGANDO FETCH
     try{
         const res = await fetch('productos.json')
         const data = await res.json()
