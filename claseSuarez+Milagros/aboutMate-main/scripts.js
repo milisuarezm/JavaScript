@@ -20,17 +20,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 cards.addEventListener('click', e =>{
     addCarrito(e)
+    
+    
+})
+
+items.addEventListener('click', e=>{
+    btnAccion(e)
     Swal.fire({                                 // mensaje de producto añadido 
         icon: 'success',
         text: 'Your item has been added',
         showConfirmButton: false,
         timer: 2000
     })
-    
-})
-
-items.addEventListener('click', e=>{
-    btnAccion(e)
    
 })
 
