@@ -1,0 +1,31 @@
+[
+    {
+        "precio": 550,
+        "id": 1,
+        "title": "La Merced, 500g.",
+        "thumbnailUrl": "photos/lamerced.jpg"
+       
+    },
+
+    {
+        "precio": 850,
+        "id": 2,
+        "title": "Taragui, 1000g.",
+        "thumbnailUrl": "photos/taragui.jpg"
+    },
+
+    {
+        "precio": 450,
+        "id": 3,
+        "title": "La Union, 500g.",
+        "thumbnailUrl": "photos/union.jpg"
+    },
+
+    {
+        "precio": 500,
+        "id": 4,
+        "title": "Playadito",
+        "thumbnailUrl": "photos/playadito.jpg"
+    }
+]
+
